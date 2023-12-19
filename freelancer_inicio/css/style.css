@@ -38,7 +38,7 @@ body {
 /* Si se quiere aplicar a un id se usa el # aunque no es muy recomendable aplicar estilos a los id */
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;
     /* margin agregan espacio */
     /* margin-top: 0;
     margin-right: auto;
@@ -55,9 +55,8 @@ body {
 .navegacion-principal {
     /* display: flex; nos habilita el justify content */
     display: flex;
-    flex-direction: row;
-    /* space-between distribuye equitativamente el contenido */
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navegacion-principal a {
@@ -68,8 +67,33 @@ body {
     padding: 1rem;
 }
 
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        /* space-between distribuye equitativamente el contenido */
+        justify-content: space-between;
+    }
+}
+
 /* Hover es una pseudoclase que se activa al estar sobre la etiqueta */
 .navegacion-principal a:hover {
     background-color: var(--primario);
     padding: 1rem;
+}
+
+/* Media Queries para que cambie dependiendo del tamaño de la pantalla */
+@media (min-width: 480px){
+    /* Medida para teléfono */
+}
+
+@media (min-width: 768px) {
+    /* Medida para tablet */
+}
+
+@media (min-width: 1140px) {
+    /* Laptops */
+}
+
+@media (min-width: 1400px) {
+    /* Puede utilizarse de igual manera */
 }
