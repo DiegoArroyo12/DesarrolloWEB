@@ -6,11 +6,16 @@ body {
     font-size: 16px; /* 1 rem = 10 px */
 }
 
-h1 {
+/* Cuando se aplica a clases se pone un punto */
+.titulo {
     text-align: center;
     font-size: 2em;
 }
 
-span {
+/* Aquí especificamos el span dentro del titulo */
+.titulo span {
     font-size: 2rem;
 }
+
+/* Si no es una clase y se quiere aplicar a una etiqueta general solo se pone el nombre de la etiqueta */
+/* Si se quiere aplicar a un id se usa el # aunque no es muy recomendable aplicar estilos a los id */
