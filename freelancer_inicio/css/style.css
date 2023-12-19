@@ -3,17 +3,9 @@
     /* Sección de los colores */
     --blanco: #ffffff;
     --negro: #212121;
-    --seagull-50: #eafeff;
-    --seagull-100: #cbfbff;
-    --seagull-200: #9ef6ff;
-    --seagull-300: #5bebff;
-    --seagull-400: #00d0fa;
-    --seagull-500: #00bae5;
-    --seagull-600: #0093c0;
-    --seagull-700: #03759b;
-    --seagull-800: #0d5e7d;
-    --seagull-900: #104e69;
-    --seagull-950: #033349;
+    --primario: #081b29;
+    --secundario: #00ffff;
+    --gradiente: linear-gradient(45deg, #0ef, #c800ff);
     --gris: #757575;
 
     /* Sección de fuentes */
@@ -27,13 +19,14 @@ html {
 body {
     font-size: 16px; /* 1 rem = 10 px */
     font-family: 'Oswald', sans-serif;
+    background-color: var(--primario);
 }
 
 /* Cuando se aplica a clases se pone un punto */
 .titulo {
     text-align: center;
     font-size: var(--principal);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 /* Aquí especificamos el span dentro del titulo */
@@ -43,3 +36,40 @@ body {
 
 /* Si no es una clase y se quiere aplicar a una etiqueta general solo se pone el nombre de la etiqueta */
 /* Si se quiere aplicar a un id se usa el # aunque no es muy recomendable aplicar estilos a los id */
+
+.contenedor {
+    width: 120rem;
+    /* margin agregan espacio */
+    /* margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    /* margin: 0 auto 0 auto; */
+    margin: 0 auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    /* display: flex; nos habilita el justify content */
+    display: flex;
+    flex-direction: row;
+    /* space-between distribuye equitativamente el contenido */
+    justify-content: space-between;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* Hover es una pseudoclase que se activa al estar sobre la etiqueta */
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    padding: 1rem;
+}
