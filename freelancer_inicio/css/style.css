@@ -1,3 +1,25 @@
+/* Empezar con dos puntos es un pseudoelemento */
+:root {
+    /* Sección de los colores */
+    --blanco: #ffffff;
+    --negro: #212121;
+    --seagull-50: #eafeff;
+    --seagull-100: #cbfbff;
+    --seagull-200: #9ef6ff;
+    --seagull-300: #5bebff;
+    --seagull-400: #00d0fa;
+    --seagull-500: #00bae5;
+    --seagull-600: #0093c0;
+    --seagull-700: #03759b;
+    --seagull-800: #0d5e7d;
+    --seagull-900: #104e69;
+    --seagull-950: #033349;
+    --gris: #757575;
+
+    /* Sección de fuentes */
+    --principal: 3.8rem;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -9,7 +31,8 @@ body {
 /* Cuando se aplica a clases se pone un punto */
 .titulo {
     text-align: center;
-    font-size: 2em;
+    font-size: var(--principal);
+    color: var(--negro);
 }
 
 /* Aquí especificamos el span dentro del titulo */
