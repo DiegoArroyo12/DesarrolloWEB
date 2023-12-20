@@ -25,7 +25,8 @@ html {
 body {
     font-size: 16px; /* 1 rem = 10 px */
     font-family: 'Oswald', sans-serif;
-    background-color: var(--primario);
+    /* Aplicamos un gradiente 1: la dirección a la que va 2: De que color va a empezar 3: Al color que va a llegar */
+    background-image: linear-gradient(to bottom, #081b29, #144666);
 }
 
 h1 {
