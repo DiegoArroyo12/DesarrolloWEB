@@ -97,3 +97,9 @@ body {
 @media (min-width: 1400px) {
     /* Puede utilizarse de igual manera */
 }
+
+.hero {
+    background-image: url(../img/hero.jpg); /* Con dos puntos y diagonal sales de la carpeta actual */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
