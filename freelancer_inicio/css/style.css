@@ -175,4 +175,21 @@ h1, h2, h3 {
 .contenido-hero p {
     color: var(--blanco);
 }
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+    /*  Define los tamaños de los grid   
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 800px;
+        
+        Hace lo mismo que la sintaxis anterior pero es más corto
+        grid: 200px 800px / 300px 300px; */
 
+        /* fr: es por fracciones de un entero y lo calcula automaticamente 1fr: 25 1fr: 25 2fr: 50 */
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 33.3% 33.3% 33.3%; 
+        Son lo mismo en diferentes sintaxis*/
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
