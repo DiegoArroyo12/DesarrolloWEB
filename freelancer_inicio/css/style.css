@@ -68,6 +68,26 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem; /* 1: Arriba 2: Derecha 3: Abajo 4: Izquierda */
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase; /* Hace que este todo el texto en mayúsculas */
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 85%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -144,3 +164,4 @@ h1, h2, h3 {
 .contenido-hero p {
     color: var(--blanco);
 }
+
