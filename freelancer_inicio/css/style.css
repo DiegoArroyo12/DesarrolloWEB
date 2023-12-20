@@ -76,6 +76,7 @@ h1, h2, h3 {
     margin-left: auto; */
     /* margin: 0 auto 0 auto; */
     margin: 0 auto;
+    color: var(--blanco);
 }
 
 .boton {
@@ -191,5 +192,33 @@ h1, h2, h3 {
         grid-template-columns: 33.3% 33.3% 33.3%; 
         Son lo mismo en diferentes sintaxis*/
         grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem; /* Separación de las columnas */
     }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+.servicio p {
+    line-height: 2; /* Interlineado, separación de el texto */
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: #47b3e9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
