@@ -29,6 +29,15 @@ body {
     background-image: linear-gradient(to bottom, #081b29, #144666);
 }
 
+.sombra {
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(0,255,255,1);
+    -moz-box-shadow: 0px 10px 30px 0px rgba(0,255,255,1);
+    box-shadow: 0px 10px 30px 0px rgba(0,255,255,1);
+    background-color: #081b29;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 h1 {
     font-size: var(--principal);
 }
@@ -145,6 +154,7 @@ h1, h2, h3 {
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
