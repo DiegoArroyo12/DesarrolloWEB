@@ -14,8 +14,17 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hack para Box Model */
+    /* scroll-snap-type: y mandatory; */ /* x: horizontal y: vertical */
 }
+
+/* Scroll Snap */
+/* .servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+} */
 
 /* El asterisco selecciona todos los elementos de la página */
 *, *:before, *:after {
@@ -203,6 +212,8 @@ h1, h2, h3 {
 .contenido-hero p {
     color: var(--blanco);
 }
+
+/* Servicios */
 @media (min-width: 768px) {
     .servicios {
         display: grid;
