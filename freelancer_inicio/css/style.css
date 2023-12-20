@@ -14,6 +14,12 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* El asterisco selecciona todos los elementos de la página */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -102,4 +108,6 @@ body {
     background-image: url(../img/hero.jpg); /* Con dos puntos y diagonal sales de la carpeta actual */
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    padding: 20px;
 }
