@@ -36,7 +36,7 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .contenedor {
@@ -52,4 +52,34 @@ h1, h2, h3 {
 
 h1 {font-size: 4rem;}
 h2 {font-size: 3.2rem;}
-h3 {font-size: 2.4;}    
+h3 {font-size: 2.4;}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+/* Navegación */
+.navegacion {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Separa los dos enlaces */
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 30px;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo {
+    color: var(--secundario);
+}
