@@ -24,7 +24,32 @@
     </nav>
 
     <main class="contenedor">
-        <h1>Producto</h1>
+        <h1>ReactJS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="Imagen del Producto">
+
+            <div class="camisa__contenido">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quam enim similique ullam provident inventore ipsum pariatur suscipit consequatur 
+                    laborum ipsam nobis fuga iste soluta totam, culpa delectus quis, sunt voluptas!
+
+                    <form class="formulario">
+                        <select>
+                            <!-- disabled: Hace que no lo puedas seleccionar -->
+                            <!-- selected: Hace que sea el seleccionado por default -->
+                            <option disabled selected>-- Seleccionar Talla --</option>
+                            <option >Chica</option>
+                            <option >Mediana</option>
+                            <option >Grande</option>
+                        </select>
+                        <!-- min: Hace que el número más bajo a seleccionar sea ese -->
+                        <input type="number" placeholder="Cantidad" min="1">
+                        <input type="submit" value="Agregar al Carrito">
+                    </form>
+                </p>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
