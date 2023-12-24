@@ -48,3 +48,16 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .con-sidebar {
+        display:grid;
+        grid-template-columns: 3fr 1fr; /* Cambiando estos valores cambia el tamaño del sidebar */
+        gap: 4rem;
+        grid-auto-flow: column; /* Que lo acomode en columnas */
+    }
+
+    aside {
+        grid-column: 2 / 3; /* Cambiando estos valores cambia la posición del sidebar */
+    }
+}
