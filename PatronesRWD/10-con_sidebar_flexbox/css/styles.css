@@ -49,3 +49,27 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex; /* Ya lo posiciona de izquierda a derecha */
+        /* justify-content: space-between; */ /* Se agrega con la otra sintaxis */
+        gap: 2rem;
+    }
+
+    aside {
+        flex: 1;
+    }
+    /* Por cada pixel que reciba el aside el article recibirá 3 */
+    article {
+        flex: 3;
+    }
+
+    /* Otra sintaxis (eliminando el gap) */
+    aside {
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+    article {
+        flex: 0 0 calc(66.66% - 1rem);
+    }
+}
