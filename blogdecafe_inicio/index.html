@@ -17,8 +17,6 @@
 
     <link rel="stylesheet" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="img/blog1.jpg" as="image">
 </head>
 <body>
     
@@ -51,7 +49,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="Imagen Blog" loading="lazy"> <!-- loading: Hace que se cargue la imagen hasta que sea visible por el usuario -->
+                    <picture> <!-- Picture decide cual es mejor para usar de las opciones proporcionadas -->
+                        <source srcset="img/blog1.webp" type="image/webp" loading="lazy"> <!-- Webp es más ligero pero no tiene tanto soporte -->
+                        <img src="img/blog1.jpg" alt="Imagen Blog" loading="lazy"> <!-- loading: Hace que se cargue la imagen hasta que sea visible por el usuario -->
+                    </picture>
                 </div>
     
                 <div class="entrada__contenido">
@@ -64,7 +65,10 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="Imagen Blog" loading="lazy">
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp" loading="lazy"> <!-- Webp es más ligero pero no tiene tanto soporte -->
+                        <img src="img/blog2.jpg" alt="Imagen Blog" loading="lazy"> <!-- loading: Hace que se cargue la imagen hasta que sea visible por el usuario -->
+                    </picture>
                 </div>
     
                 <div class="entrada__contenido">
@@ -77,7 +81,10 @@
             </article>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="Imagen Blog" loading="lazy">
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp" loading="lazy"> <!-- Webp es más ligero pero no tiene tanto soporte -->
+                        <img src="img/blog3.jpg" alt="Imagen Blog" loading="lazy"> <!-- loading: Hace que se cargue la imagen hasta que sea visible por el usuario -->
+                    </picture>
                 </div>
     
                 <div class="entrada__contenido">
