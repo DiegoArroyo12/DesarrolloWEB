@@ -27,6 +27,7 @@ body {
 .contenedor {
     max-width: 120rem;
     width: 90%;
+    width: min(90%, 120rem); /* Lo mismo que las dos líneas de arriba */
     margin: 0 auto;
 }
 
@@ -63,7 +64,7 @@ img {
     margin: 0;
 }
 
-.no-pagging {
+.no-padding {
     padding: 0;
 }
 
@@ -90,6 +91,10 @@ img {
     .header__texto {
         margin-top: 20rem;
     }
+}
+
+.barra {
+    padding: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -197,4 +202,10 @@ img {
 .widget-curso__label,
 .widget-curso__info {
     font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--negro);
+    /* padding-bottom: 3rem; */
+    margin-top: 4rem;
 }
