@@ -1,11 +1,17 @@
 // Strings o Cadenas de Texto
 
-const producto = "Monitor de 20 Pulgadas";
-const producto2 = String('Monitor 30 Pulgadas');
-const producto3 = new String('Monitor 50 Pulgadas');
+const tweet = "Aprendiendo JavaScript con el curso de Desarrollo Web Completo";
+const producto2 = "Monitor HD";
+const email = 'correo@correo.com';
 
-const product = "Monitor de 20 Pulgadas\"" // Así podemos usar otra comilla doble sin marcar errores
+console.log(tweet.length);
+console.log(producto2);
 
-console.log(producto)
-console.log(producto2)
-console.log(producto3)
+// IndexOf: Dice en que posición se encuentra un texto que estemos buscando
+console.log(tweet.indexOf('JavaScript'));
+console.log(producto2.indexOf('Tablet'));
+console.log(email.indexOf('@'));
+
+// Includes: Retorna valores booleanos
+console.log(tweet.includes('JavaScript'));
+console.log(producto2.includes('Tablet'));
