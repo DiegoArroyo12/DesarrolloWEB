@@ -9,8 +9,8 @@ const producto = {
 // const precioProducto = producto.precio;
 // const nombreProducto = producto.nombreProducto;
 
-console.log(precioProducto);
-console.log(nombreProducto);
+// console.log(precioProducto);
+// console.log(nombreProducto);
 
 
 // Destructuring
