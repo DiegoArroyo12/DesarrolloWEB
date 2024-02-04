@@ -113,39 +113,58 @@ formulario.addEventListener('submit', function (e) {
     console.log(mensaje);
 
     if (nombre === '' || email === '' || mensaje === '') {
-        mostrarError('Todos los campos son obligatorios');
+        mostrarAlerta('Todos los campos son obligatorios', 'error');
 
         return; // Corta la ejecución del código
     }
 
     // Crear la otra alerta de Enviar correctamente
-    mostrarMensaje('Mensaje Enviado Correctamente');
+    mostrarAlerta('Mensaje Enviado Correctamente');
 });
 
-// Muestra un error en pantalla
-function mostrarError(mensaje) {
-    const error = document.createElement('P');
-    error.textContent = mensaje;
-    error.classList.add('error');
+// // Muestra un error en pantalla
+// function mostrarError(mensaje) {
+//     const error = document.createElement('P');
+//     error.textContent = mensaje;
+//     error.classList.add('error');
 
-    formulario.appendChild(error);
+//     formulario.appendChild(error);
+
+//     // Desaparezca después de 5 segundos
+//     setTimeout (() => {
+//         error.remove();
+//     }, 5000);
+// };
+
+// // Muestra una alerta de que se envió correctamente
+// function mostrarMensaje(mensaje) {
+//     const correcto = document.createElement('P');
+//     correcto.textContent = mensaje;
+//     correcto.classList.add('correcto');
+
+//     formulario.appendChild(correcto);
+
+//     // Desaparezca después de 5 segundos
+//     setTimeout (() => {
+//         correcto.remove();
+//     }, 5000);
+// };
+
+// Esta función hace lo que hacían las dos anteriores
+function mostrarAlerta(mensaje, error = null) {
+    const alerta = document.createElement('P');
+    alerta.textContent = mensaje;
+
+    if(error) {
+        alerta.classList.add('error');
+    }else {
+        alerta.classList.add('correcto');
+    }
+
+    formulario.appendChild(alerta);
 
     // Desaparezca después de 5 segundos
     setTimeout (() => {
-        error.remove();
-    }, 5000);
-};
-
-// Muestra una alerta de que se envió correctamente
-function mostrarMensaje(mensaje) {
-    const correcto = document.createElement('P');
-    correcto.textContent = mensaje;
-    correcto.classList.add('correcto');
-
-    formulario.appendChild(correcto);
-
-    // Desaparezca después de 5 segundos
-    setTimeout (() => {
-        correcto.remove();
-    }, 5000);
+        alerta.remove();
+    }, 5000);    
 }
