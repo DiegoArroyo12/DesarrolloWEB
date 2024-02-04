@@ -37,26 +37,26 @@ console.log(nuevoEnlace);
 
 // Eventos
 
-console.log(1);
+// console.log(1);
 
-window.onload = function () {
-    console.log(3);
-};
+// window.onload = function () {
+//     console.log(3);
+// };
 
-// window hace referencia todo el contenido de la página, document hace más referencia al HTML
-window.addEventListener('load', function () {
-    console.log(2);
-}); // load espera a que el JS y los archivos que dependen del HTML estén listos
+// // window hace referencia todo el contenido de la página, document hace más referencia al HTML
+// window.addEventListener('load', function () {
+//     console.log(2);
+// }); // load espera a que el JS y los archivos que dependen del HTML estén listos
 
-document.addEventListener('DOMContentLoaded', function () { // Solo espera que se descargue el HTML, pero no espera al CSS o las imágenes
-    console.log(4);
-});
+// document.addEventListener('DOMContentLoaded', function () { // Solo espera que se descargue el HTML, pero no espera al CSS o las imágenes
+//     console.log(4);
+// });
 
-console.log(5);
+// console.log(5);
 
-window.onscroll = function () {
-    console.log('scrolling...'); // Detecta si se hace scroll
-};
+// window.onscroll = function () {
+//     console.log('scrolling...'); // Detecta si se hace scroll
+// };
 
 
 // Seleccionar elementos y asociarles un evento
@@ -68,4 +68,33 @@ btnEnviar.addEventListener('click', function (evento) {
     // Validar un formulario
 
     console.log('Enviando Formulario');
-})
+});
+
+
+// Eventos de los inputs o textarea
+
+const datos = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+};
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+// 'change' se ejecuta hasta que sales del objeto
+// 'input' lo detecta en tiempo real
+nombre.addEventListener('input', leerTexto);
+
+email.addEventListener('input', leerTexto);
+
+mensaje.addEventListener('input', leerTexto);
+
+function leerTexto(e) {
+    //console.log(e.target.value); // target es el input sobre el que estamos escribiendo
+
+    datos[e.target.id] = e.target.value; // Para que esto funcione deben tener el mismo nombre el id y los valores del objeto 'datos'
+
+    console.log(datos);
+}
