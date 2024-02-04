@@ -106,8 +106,46 @@ formulario.addEventListener('submit', function (e) {
 
     // Validar el formulario
     
+    const { nombre, email, mensaje } = datos;
 
-    // Enviar el formulario
+    console.log(nombre);
+    console.log(email);
+    console.log(mensaje);
 
+    if (nombre === '' || email === '' || mensaje === '') {
+        mostrarError('Todos los campos son obligatorios');
 
+        return; // Corta la ejecución del código
+    }
+
+    // Crear la otra alerta de Enviar correctamente
+    mostrarMensaje('Mensaje Enviado Correctamente');
 });
+
+// Muestra un error en pantalla
+function mostrarError(mensaje) {
+    const error = document.createElement('P');
+    error.textContent = mensaje;
+    error.classList.add('error');
+
+    formulario.appendChild(error);
+
+    // Desaparezca después de 5 segundos
+    setTimeout (() => {
+        error.remove();
+    }, 5000);
+};
+
+// Muestra una alerta de que se envió correctamente
+function mostrarMensaje(mensaje) {
+    const correcto = document.createElement('P');
+    correcto.textContent = mensaje;
+    correcto.classList.add('correcto');
+
+    formulario.appendChild(correcto);
+
+    // Desaparezca después de 5 segundos
+    setTimeout (() => {
+        correcto.remove();
+    }, 5000);
+}
