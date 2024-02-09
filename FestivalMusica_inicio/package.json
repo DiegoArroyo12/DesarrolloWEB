@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/DiegoArroyo12/DesarrolloWEB/issues"
   },
-  "homepage": "https://github.com/DiegoArroyo12/DesarrolloWEB#readme"
+  "homepage": "https://github.com/DiegoArroyo12/DesarrolloWEB#readme",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
 }
