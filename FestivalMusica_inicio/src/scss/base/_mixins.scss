@@ -1,0 +1,6 @@
+@mixin heading {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: green;
+}
+/* Mixin hace que podamos reutilizar el código y se incluye con @incluide */

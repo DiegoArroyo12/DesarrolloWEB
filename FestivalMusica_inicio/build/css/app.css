@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/* Mixin hace que podamos reutilizar el código y se incluye con @incluide */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -328,7 +330,7 @@ p {
   color: #000000;
 }
 
-.contenido {
+.contenedor {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -367,6 +369,18 @@ h3 {
 }
 .navegacion-principal a:hover {
   color: #FEF46D;
+}
+
+.prueba {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: green;
+}
+
+.texto-prueba {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: green;
 }
 
 /*# sourceMappingURL=app.css.map */
