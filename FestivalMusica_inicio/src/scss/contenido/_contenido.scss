@@ -1,5 +1,6 @@
- @use 'base/variables' as v;
+ @use '../base/variables' as v;
 
 h1 {
     color: v.$blue;
+    text-transform: uppercase;
 }
