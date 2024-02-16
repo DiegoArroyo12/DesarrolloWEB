@@ -1,14 +1,38 @@
 @use '../base/variables' as v;
 
-@mixin heading($color: blue, $border-radius: false) {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    color: $color;
-    letter-spacing: 1px;
-    background-color: black;
+// @mixin heading($color: blue, $border-radius: false) {
+//     text-transform: uppercase;
+//     font-size: 2.4rem;
+//     color: $color;
+//     letter-spacing: 1px;
+//     background-color: black;
 
-    @if $border-radius {
-        border-radius: 1rem;
+//     @if $border-radius {
+//         border-radius: 1rem;
+//     }
+// }
+/* Mixin hace que podamos reutilizar el código y se incluye con @incluide */
+
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
     }
 }
-/* Mixin hace que podamos reutilizar el código y se incluye con @incluide */
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
