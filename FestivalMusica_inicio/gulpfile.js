@@ -5,6 +5,8 @@ const sass = require("gulp-sass")(require("sass"));
 const plumber = require('gulp-plumber');
 
 // Imagenes
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
 function css(done) {
@@ -14,6 +16,17 @@ function css(done) {
         .pipe(dest("build/css") );     // Almacenarla en el disco duro
 
     done(); // Callback que avisa a gulp cuando llegamos al final
+}
+
+function imagenes(done) {
+    const opciones = {
+        optimizationLevel: 3
+    };
+    src('src/img/**/*.{png,jpg}')
+        .pipe( cache( imagemin(opciones) ) )
+        .pipe( dest('build/img') )
+    
+    done();
 }
 
 function versionWebp( done ) {
@@ -36,8 +49,9 @@ function dev(done) {
 }
 
 exports.css = css;
+exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
-exports.dev = parallel( versionWebp, dev ); // npm i -D gulp-webp@4
+exports.dev = parallel( imagenes, versionWebp, dev ); // npm i -D gulp-webp@4
 
 // npx gulp 'nombre de la tarea'
 // npm run 'nombre del package de json'
