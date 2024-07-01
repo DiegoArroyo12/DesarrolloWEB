@@ -312,6 +312,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-padding-top: 0rem;
 }
 
 *,
@@ -343,6 +344,7 @@ a {
 
 h1, h2, h3 {
   margin: 0 0 5rem 0;
+  font-weight: 900;
 }
 
 h1 {
@@ -355,6 +357,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  text-align: center;
 }
 
 img {
@@ -429,7 +432,7 @@ img {
   width: auto;
   display: block; /* Quita la línea que sobraba de el video */
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .video video {
     width: 100%;
   }
@@ -481,3 +484,71 @@ img {
   color: #f537dc;
   font-weight: 700;
 }
+
+.lineup {
+  background-color: #f537dc;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup .dia {
+  text-align: center;
+  color: #FFFFFF;
+}
+.lineup .dia {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+.escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario .nombre-escenario {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-amarillo {
+  background-color: #FEF46D;
+}
+.bg-amarillo li:nth-child(odd) { /* odd: impar even: par */
+  background-color: #fef686;
+  /* lighten enclarece y darken oscurece y son funciones de sass */
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+.bg-verde li:nth-child(odd) { /* odd: impar even: par */
+  background-color: #5ebfbb;
+  /* lighten enclarece y darken oscurece y son funciones de sass */
+}
+
+/*# sourceMappingURL=app.css.map */
