@@ -356,7 +356,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 6rem;
   text-align: center;
 }
 
@@ -549,6 +549,83 @@ img {
 .bg-verde li:nth-child(odd) { /* odd: impar even: par */
   background-color: #5ebfbb;
   /* lighten enclarece y darken oscurece y son funciones de sass */
+}
+
+.contenedor-boletos {
+  background-color: #4CB8B3;
+  padding: 5rem 0;
+}
+.contenedor-boletos h3 {
+  color: #FFFFFF;
+}
+.contenedor-boletos .boletos {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contenedor-boletos .boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+/* El amperson hace que se genere una sola clase, cuando comparten similitud en el nombre y puedas ordenar de mejor manera el código */
+.pase {
+  transition: transform 0.3s ease-in-out;
+}
+.pase:hover {
+  transform: scale(1.1); /* 1 lo deja normal, 2 hace un zoom duplicando su tamaño. */
+}
+.pase-nombre {
+  font-size: 3.6rem;
+  font-weight: 900;
+  text-align: center;
+  color: #FFFFFF;
+}
+.pase-header, .pase-footer {
+  padding: 0.5rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+.pase-header {
+  background-color: #f537dc;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  padding: 1rem 0;
+}
+.pase-body {
+  background-color: #FFFFFF;
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li {
+  padding: 2rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pase-footer {
+  background-color: #FFFFFF;
+  padding: 3rem;
+}
+.pase-footer p {
+  font-size: 2.8rem;
+  font-weight: 900;
+  background-color: #752F97;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.pase-footer p:hover {
+  background-color: #391749;
 }
 
 /*# sourceMappingURL=app.css.map */
