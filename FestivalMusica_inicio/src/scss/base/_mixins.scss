@@ -14,7 +14,7 @@
 /* Mixin hace que podamos reutilizar el código y se incluye con @incluide */
 
 @mixin telefono {
-    @media (min-width: v.$telefono) {
+    @media (min-width: v.$telefonos) {
         @content;
     }
 }
@@ -41,6 +41,7 @@
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
+    padding: 5rem 0;
 }
 
 @mixin grid($columnas: 1, $espaciado: 5rem) {
