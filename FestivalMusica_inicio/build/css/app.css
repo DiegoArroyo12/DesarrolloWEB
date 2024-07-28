@@ -423,8 +423,8 @@ img {
     margin: 0;
   }
 }
-.navegacion-principal a:hover {
-  color: #FEF46D;
+.navegacion-principal a:hover, .navegacion-principal a.active {
+  color: #ffee00;
 }
 
 .video {
@@ -552,10 +552,10 @@ img {
 }
 
 .bg-amarillo {
-  background-color: #FEF46D;
+  background-color: #ffee00;
 }
 .bg-amarillo li:nth-child(odd) { /* odd: impar even: par */
-  background-color: #fef686;
+  background-color: #fff01a;
   /* lighten enclarece y darken oscurece y son funciones de sass */
 }
 
